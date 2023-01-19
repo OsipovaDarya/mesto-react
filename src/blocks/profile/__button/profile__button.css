@@ -1,0 +1,18 @@
+.profile__button {
+  background-image: url(../../../images/karandash.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50%;
+  height: 121px;
+  position: absolute;
+  width: 121px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.profile__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  background-color: black;
+}

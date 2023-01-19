@@ -1,0 +1,33 @@
+.profile__edit {
+  display: block;
+  border: 1px solid #ffffff;
+  width: 24px;
+  height: 24px;
+  grid-column: 2 / 2;
+  grid-row: 1;
+  margin: 36px 0;
+  background-image: url(../../../images/pancil.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .profile__edit {
+    grid-row: 2 / 2;
+    width: 18px;
+    height: 18px;
+    margin: 28px 34px 0 0;
+  }
+}
+
+.profile__edit:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 350px) {
+  .profile__edit {
+    margin: 28px 10px 0 0;
+  }
+}

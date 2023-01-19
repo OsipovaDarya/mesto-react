@@ -1,0 +1,11 @@
+.element__group {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 15px 25px 21px;
+}
+
+@media screen and (max-width: 768px) {
+  .element__group {
+    margin: 25px 15px 22px 21px;
+  }
+}

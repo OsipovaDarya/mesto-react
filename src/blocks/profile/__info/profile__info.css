@@ -1,0 +1,11 @@
+.profile__info {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .profile__info {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+}
