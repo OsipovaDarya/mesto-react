@@ -1,6 +1,10 @@
 import Card from "./Card";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import React from "react";
 
 function Main(props) {
+  const currentUser = React.useContext(CurrentUserContext);
+
   return (
     <main className="content">
       <section className="profile">
@@ -9,14 +13,14 @@ function Main(props) {
             <button onClick={props.onEditAvatar} className="profile__button" />
             <img
               className="profile__avatar"
-              src={props.userAvatar}
+              src={currentUser.avatar}
 
               alt="мужчина"
             />
           </div>
           <div className="profile__text">
-            <h1 className="profile__name" >{props.userName}</h1>
-            <h2 className="profile__job" >{props.userDescription}</h2>
+            <h1 className="profile__name" >{currentUser.name}</h1>
+            <h2 className="profile__job" >{currentUser.about}</h2>
           </div>
           <button onClick={props.onEditProfile} className="profile__edit" type="button" />
         </div>
@@ -31,6 +35,8 @@ function Main(props) {
             key={card._id}
             onCardClick={props.onCardClick}
             name={card.name}
+            onCardLike={props.onCardLike}
+            onCardDelete={props.onCardDelete}
           />
         ))}
       </section>

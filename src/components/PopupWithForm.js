@@ -7,6 +7,7 @@ function PopupWithForm(props) {
           name={`popup_${props.name}`}
           className="popup__container popup__form-mesto popup__form"
           noValidate=""
+          onSubmit={props.onSubmit}
         >
           <h2 className="popup__title">{`${props.title}`}</h2>
           {props.children}
