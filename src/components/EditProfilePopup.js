@@ -1,17 +1,20 @@
 import { CurrentUserContext } from "../contexts/CurrentUserContext"
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import PopupWithForm from "./PopupWithForm";
+import { useState } from "react";
+
+
 
 function EditProfilePopup(props) {
-  const [name, setName] = React.useState('');
-  const [description, setDescription] = React.useState('');
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
 
   // Подписка на контекст
-  const currentUser = React.useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
 
   // После загрузки текущего пользователя из API
   // его данные будут использованы в управляемых компонентах.
-  React.useEffect(() => {
+  useEffect(() => {
     if (props.isOpen) {
       setName(currentUser.name);
       setDescription(currentUser.about);

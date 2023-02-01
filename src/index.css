@@ -31,6 +31,7 @@
 @import url(../src/blocks/element/__mask-group/element__mask-group.css);
 @import url(../src/blocks/element/__text/element__text.css);
 @import url(../src/blocks/element/__vector/element__vector.css);
+@import url(../src/blocks/element/__vector/_like/element__vector_like.css);
 
 /*elements*/
 @import url(../src/blocks/elements/elements.css);
