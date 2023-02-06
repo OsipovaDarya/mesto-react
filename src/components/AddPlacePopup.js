@@ -9,9 +9,9 @@ function AddPlacePopup(props) {
   const currentUser = useContext(CurrentUserContext);
 
   useEffect(() => {
-    setAddName(currentUser.addName);
+    setAddName();
     setAddName('');
-    setAddLink(currentUser.addlink);
+    setAddLink();
     setAddLink('');
   }, [currentUser, props.isOpen]);
 
@@ -53,6 +53,7 @@ function AddPlacePopup(props) {
         placeholder="Название"
         required=""
         onChange={handleAddName}
+        value={addName}
       />
       <span className="popup__input-error name-mesto-error" />
       <input
@@ -63,6 +64,7 @@ function AddPlacePopup(props) {
         placeholder="Ссылка на картинку"
         required=""
         onChange={handleAddLink}
+        value={addlink}
       />
       <span className="popup__input-error name-photo-error" />
 
